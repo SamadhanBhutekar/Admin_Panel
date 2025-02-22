@@ -15,13 +15,6 @@ const path = require('path');
 app.use(cors());
 app.use(express.json());
 
-app.use(express.static(path.join(__dirname, "build"))); // Adjusted path if your build is directly in the project
-
-// Handle React routes
-app.get("*", (req, res) => {
-  res.sendFile(path.join(__dirname, "build", "index.html"));
-});
-
 // ------------------------Registration Api-----------------------------
 
 // ---------------------------validation Api-------------------------
